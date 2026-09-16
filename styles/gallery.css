@@ -2,7 +2,6 @@
     width: 100%;
     max-width: 80rem;
     padding: 2.5rem 2rem;
-
     margin-inline: auto;
 
     & header {
@@ -34,6 +33,14 @@
         border-radius: 2.5rem;
         overflow: hidden;
         line-height: 0;
+
+        animation: image-appear 2s linear backwards;
+        animation-timeline: view();
+        animation-range: 100px 350px;
+
+        &[data-delay] {
+            animation-range: 150px 350px;
+        }
 
         & > img {
             height: 25rem;
